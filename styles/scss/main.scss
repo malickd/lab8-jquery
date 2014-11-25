@@ -1,0 +1,22 @@
+$main-color: #abc123;
+$text-color: #ab43c7;
+@mixin post {
+    font: .8em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: $text-color;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: $main-color;
+}
+
+.post {
+        padding-left: 1em;
+        padding-bottom: 1em;
+    .post-title {
+        @include post;
+        font-size: 1.5rem;
+    }
+    .post-body {
+        @include post;
+    }
+}
